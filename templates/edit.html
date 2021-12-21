@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="container">
+    <!-- row：水平排列; g-3:元素的间距; align-items-end:交叉轴对齐方式 -->
+    <h3>编辑电影</h3>
+    <form method="post" class="row g-3 align-items-end">
+        <!-- col-auto：自动列宽 -->
+        <div class="mb-3 col-auto">
+            <label for="movieTitle" class="form-label">Movie Title</label>
+            <input type="text" class="form-control" name="title" value="{{movie.title}}" id="movieTitle" required autocomplete="off">
+            <!-- <div class="form-text">请输入电影标题</div> -->
+        </div>
+        <div class="mb-3 col-auto">
+            <label for="publishYear" class="form-label">Publish Year</label>
+            <input type="text" class="form-control" name="year" value="{{movie.year}}" id="publishYear" required autocomplete="off">
+            <!-- <div class="form-text">请输入电影发行年份</div> -->
+        </div>
+        <div class="mb-3 col-auto">
+            <input type="submit" class="btn btn-primary" value="修改"></input>
+        </div>
+    </form>
+</div>
+<div class="m-5"></div>
+
+{% endblock main %}

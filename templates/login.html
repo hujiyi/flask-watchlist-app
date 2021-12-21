@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="container">
+
+    <div class="row justify-content-md-center">
+        <div class="col-lg-5">
+            <div class="my-5">
+                <h3>Login</h3>
+            </div>
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="username" class="form-label">User Name</label>
+                    <input type="text" class="form-control" name="username" id="username" required>
+                    <div class="form-text">Please input your username</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" required>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <!-- d-grid: 设置 input 父元素的宽度，让 input 宽度 100% -->
+                <div class="d-grid mb-3">
+                    <input type="submit" name="submit" class="btn btn-primary" value="登录"></input>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock main %}

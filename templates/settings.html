@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="container">
+
+    <div class="row justify-content-md-center">
+        <div class="col-lg-5">
+            <div class="my-5">
+                <h3>Settings</h3>
+            </div>
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" value="{{current_user.name}}" name="name" id="name" required>
+                    <div class="form-text">Please input your name</div>
+                </div>
+                
+                <!-- d-grid: 设置 input 父元素的宽度，让 input 宽度 100% -->
+                <div class="d-grid mb-3">
+                    <input type="submit" name="submit" class="btn btn-primary" value="修改"></input>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock main %}
